@@ -1,6 +1,5 @@
 import { AUTH } from '../constants/actionTypes';
 import * as api from '../api/index.js';
-import {useNavigate} from 'react-router-dom'
 
 
 export const signin = (formData,  history) => async (dispatch) => {
