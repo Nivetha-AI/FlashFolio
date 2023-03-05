@@ -26,16 +26,3 @@ export const likePost = (id) => API.patch(`/posts/${id}/likePost`);
 export const updatePost = (id, updatedPost) => API.patch(`/posts/${id}`, updatedPost);
 export const deletePost = (id) => API.delete(`/posts/${id}`);
 
-// export const createOrGetUser = async(response)=>{
-
-//   const decode=jwt_decode(response.credential)
-//   console.log(decode)
-//   const user={
-//     _id:sub,
-//     _type:'user',
-//     userName:name,
-//     image:picture
-//   }
-//   await axios.post('http://localhost:3000/api/auth', user);
-// }
-
