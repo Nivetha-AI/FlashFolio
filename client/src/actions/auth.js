@@ -1,10 +1,10 @@
 import { AUTH } from '../constants/actionTypes';
 import * as api from '../api/index.js';
-import {useNavigate} from 'react-router-dom'
 
 
 export const signin = (formData,  history) => async (dispatch) => {
   // const history =useNavigate();
+  // new
     try {
 
       const { data } = await api.signIn(formData);
@@ -14,6 +14,7 @@ export const signin = (formData,  history) => async (dispatch) => {
       history('/');
     } catch (error) {
       console.log(error);
+      
     }
   };
   
