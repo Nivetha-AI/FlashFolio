@@ -4,8 +4,8 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import postRoutes from './server/routes/posts.js';
-import userRoutes from './server/routes/users.js';
+import postRoutes from './routes/posts.js';
+import userRoutes from './routes/users.js';
 
 
 const app = express();
@@ -18,7 +18,7 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use('/user', userRoutes)
 
-app.use(express.static(path.join(__dirname,"./client/build/")))
+// app.use(express.static(path.join(__dirname,"./client/build/")))
 
 app.get("*", (req,res)=>(
   res.sendFile(path.join(__dirname,"./client/build/index.html"))
