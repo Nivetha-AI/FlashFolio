@@ -10,7 +10,6 @@ import {GoogleOAuthProvider} from "@react-oauth/google";
 import { GoogleLogin } from '@react-oauth/google';
 import { signin, signup } from '../../actions/auth';
 import jwt_decode from 'jwt-decode'
-// import {GoogleLogin} from "react-google-login";
 const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
 
 const Auth = () => {
